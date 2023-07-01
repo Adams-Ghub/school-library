@@ -5,7 +5,7 @@ class Student < Person
   def initialize(classroom, age, name, parent_permission, id: rand)
     super(age, name, id: id)
     @classroom = classroom
-    @parent_permission=parent_permission
+    @parent_permission = parent_permission
   end
 
   def classroom=(classroom)
