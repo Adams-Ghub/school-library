@@ -25,7 +25,7 @@ module DETAILS
   end
 
   def student_details
-    student = { name: '', age: 0, parent_permission: true, classroom: '' }
+    student = { name: '', age: 0, parent_permission: true, classroom: ''}
 
     loop do
       student[:name] = get_input("Enter student's name:")

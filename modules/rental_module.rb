@@ -31,7 +31,7 @@ module RENTAL
   end
 
   def list_rental_per_person
-    people = @students + @teachers
+    people = @students.concat(@teachers)
 
     person = select_person(people)
     puts "All #{person.name}'s Rentals:" unless person.rental.empty?
@@ -42,7 +42,7 @@ module RENTAL
 
   def show_person_details
     person_id = 0
-    people = @students + @teachers
+    people = @students.concat(@teachers)
     loop do
       puts 'Select a person by index'
 
@@ -60,7 +60,6 @@ module RENTAL
     book_id = 0
     loop do
       puts 'Select a book by index to display its details'
-
       @books.each_with_index do |book, index|
         puts "#{index}) Title: #{book.title}, Author: #{book.author}"
       end

@@ -41,10 +41,10 @@ module PERSON
     puts 'No person availabel' unless @students.length.positive? and @teachers.length.positive?
     puts 'All people:'
     @teachers.each_with_index do |teacher, index|
-      puts "[teacher] Name:#{teacher.name}  ID:#{index}  Age:#{teacher.age} "
+      puts "[teacher] Name:#{teacher.name}  ID:#{teacher.id}  Age:#{teacher.age} "
     end
     @students.each_with_index do |student, index|
-      puts "[student] Name:#{student.name}  ID:#{index}  Age:#{student.age} "
+      puts "[student] Name:#{student.name}  ID:#{student.id}  Age:#{student.age} "
     end
   end
 end
