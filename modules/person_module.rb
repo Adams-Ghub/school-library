@@ -25,10 +25,11 @@ module PERSON
     loop do
       print 'Do you want to create a student(1) or teacher(2) [input number]:'
       number = gets.chomp.to_i
-      if number == 1
+      case number
+      when 1
         create_student
         break
-      elsif number == 2
+      when 2
         create_teacher
         break
       else

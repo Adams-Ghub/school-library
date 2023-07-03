@@ -17,9 +17,10 @@ module DETAILS
     puts text
     input = gets.chomp.downcase
 
-    if input == 'y'
+    case input
+    when 'y'
       true
-    elsif input == 'n'
+    when 'n'
       false
     end
   end
