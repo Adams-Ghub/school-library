@@ -1,24 +1,13 @@
 require './app'
-require './action-selector'
-
-def display_menu
-  puts 'Please choose an option by entering a number:'
-  puts '1. List all books'
-  puts '2. List all people'
-  puts '3. Create a person'
-  puts '4. Create a book'
-  puts '5. Create a rental'
-  puts '6. List all rentals for a given person id'
-  puts '7. Exit'
-  print 'Your input: '
-end
-
+require './action_selector'
+require './display_menu'
 
 def main
   app = App.new
   action = ActionSeclector.new
+  menu = DisplayMenu.new
   loop do
-    display_menu
+    menu.display_menu
     input_number = gets.chomp.to_i
     if input_number.positive? and input_number < 7
       action.action_selector(input_number, app)
