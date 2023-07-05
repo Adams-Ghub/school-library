@@ -13,6 +13,9 @@ def main
       action.action_selector(input_number, app)
     elsif input_number == 7
       puts 'Goodbye see you soon!'
+      app.save_rental
+      app.save_books
+      app.save_person
     else
       puts 'Invalid input !'
     end

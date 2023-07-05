@@ -38,7 +38,7 @@ module DETAILS
     end
     loop do
       label = get_input('Enter classroom label:')
-      student[:classroom] = Classroom.new(label) if label.length
+      student[:classroom] = label if label.length
       break if label.length
     end
     loop do

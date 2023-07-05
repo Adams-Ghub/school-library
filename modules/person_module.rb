@@ -9,14 +9,14 @@ module PERSON
   def create_student
     details = student_details
     student = Student.new(details[:classroom], details[:age], details[:name], details[:parent_permission])
-    @students << student
+    @students.push(student)
     puts 'Student created successfully'
   end
 
   def create_teacher
     details = teacher_details
     teacher = Teacher.new(details[:age], details[:name], details[:specialization])
-    @teachers << teacher
+    @teachers.push(teacher)
     puts 'Teacher created successfully'
   end
 

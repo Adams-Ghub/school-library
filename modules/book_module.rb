@@ -27,7 +27,7 @@ module BOOK
     end
 
     book = Book.new(title, author)
-    @books << book
+    @books.push(book)
     puts 'New book added!'
   end
 end
