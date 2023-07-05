@@ -15,7 +15,7 @@ module PERSON
 
   def create_teacher
     details = teacher_details
-    teacher = Teacher.new(details[:age], details[:name], details[:specialization])
+    teacher = Teacher.new(details[:name], details[:age], details[:specialization])
     @teachers.push(teacher)
     puts 'Teacher created successfully'
   end

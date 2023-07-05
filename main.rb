@@ -6,6 +6,7 @@ def main
   app = App.new
   action = ActionSeclector.new
   menu = DisplayMenu.new
+  # app.load_data
   loop do
     menu.display_menu
     input_number = gets.chomp.to_i

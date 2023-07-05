@@ -55,12 +55,12 @@ module SAVEDATA
     save_json('person.json', people)
   end
 
-  def load_data
-    @books = load_json('books.json') || []
-    @students = load_json('students.json') || []
-    @teachers = load_json('teachers.json') || []
-    @rental = load_json('rental.json') || []
-  end
+  # def load_data
+  #   @books = load_json('books.json') || []
+  #   @students = load_json('students.json') || []
+  #   @teachers = load_json('teachers.json') || []
+  #   @rental = load_json('rental.json') || []
+  # end
 
   def save_json(filename, data)
     data.map(&:to_json)
@@ -69,11 +69,11 @@ module SAVEDATA
     end
   end
 
-  def load_json(filename)
-    if File.exist?(filename)
-      file = File.read(filename)
-      JSON.parse(file, symbolize_names: true)
-    end
-    nil
-  end
+  # def load_json(filename)
+  #   if File.exist?(filename)
+  #     file = File.read(filename)
+  #     JSON.parse(file, symbolize_names: true)
+  #   end
+  #   nil
+  # end
 end
