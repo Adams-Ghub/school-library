@@ -2,12 +2,11 @@ require './nameable'
 require './decorator'
 
 class Person < Nameable
-  def initialize(age, name = 'unknown', parent_permission: true, id: rand(1..1000).to_i)
+  def initialize(age, name = 'unknown', id: rand(1..1000).to_i)
     super()
     @id = id
     @name = name
     @age = age
-    @parent_permission = parent_permission
     @rental = []
   end
 

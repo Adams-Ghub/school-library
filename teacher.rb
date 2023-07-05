@@ -1,8 +1,10 @@
 require './person'
 class Teacher < Person
-  def initialize(name, age, spcialization, id: rand(1..1000).to_i)
+  attr_reader :specialization
+
+  def initialize(name, age, specialization, id: rand(1..1000).to_i)
     super(name, age, id: id)
-    @specialization = spcialization
+    @specialization = specialization
   end
 
   def can_use_services?
